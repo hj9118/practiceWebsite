@@ -18,7 +18,7 @@ import Licenses from './pages/Licenses';
 import NotFound from './pages/NotFound';
 import './App.css';
 import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
+import Sidebar from './components/Header';
 
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
       <Sidebar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
+        <Route path='/about-us' element={<About />} />
         <Route path='/shop' element={<Shop />} />
         <Route path='/product/:name' element={<Product />} />
         <Route path='/service' element={<Service />} />
