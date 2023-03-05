@@ -12,7 +12,6 @@ import {
 const Footer = () => {
   return (
     <>
-      <Subscribe />
       <Wrapper>
         <Contact className='contact'>
           <h3>Contact Us</h3>

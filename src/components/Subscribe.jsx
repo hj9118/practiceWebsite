@@ -8,12 +8,12 @@ const Subscribe = () => {
   return (
     <Wrapper>
       <p>Subscribe our Newsletter</p>
-      <div>
+      <form>
         <input type='email' placeholder='Your Email Address' />
         <DefaultBtn>
           Subscribe <IoIosArrowRoundForward className='arrow' />
         </DefaultBtn>
-      </div>
+      </form>
     </Wrapper>
   );
 };
@@ -43,9 +43,14 @@ const Wrapper = styled.div`
     border: none;
     border-radius: 16px;
     font-style: italic;
+    color: #d4d4d4;
     font-size: 18px;
     padding: 0 174px 0 23px;
     margin-right: 6px;
+    :focus {
+      border: 1px solid #3898ec;
+      outline: none;
+    }
   }
 `;
 

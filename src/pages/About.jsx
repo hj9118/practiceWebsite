@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Subscribe from '../components/Subscribe';
 
 const About = () => {
   return (
-    <div>About</div>
-  )
-}
+    <>
+      <div>About</div>
+      <Subscribe />
+    </>
+  );
+};
 
-export default About
+export default About;
