@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Subscribe from './Subscribe';
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <>
+      <Subscribe />
+    </>
+  );
+};
 
-export default Footer
+export default Footer;

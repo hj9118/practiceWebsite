@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Dropdown } from './Dropdown';
 import Logo from '../images/Logo.png';
-import downArrow from '../images/downArrow.png';
+import { IoIosArrowDown } from 'react-icons/io';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 const Header = () => {
@@ -18,7 +18,7 @@ const Header = () => {
       <a href='/shop'>Shop</a>
       <ol onMouseOver={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
         Pages
-        <img src={downArrow} />
+        <IoIosArrowDown />
         {open && <Dropdown />}
       </ol>
       <a href='/contact-us'>Contact Us</a>
@@ -37,6 +37,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #fff;
+  padding: 30px 0;
 
   .logo {
     font-size: 32px;
@@ -49,7 +50,7 @@ const Wrapper = styled.div`
   a {
     color: #274c5b;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 18px;
     font-family: 'Roboto';
     font-weight: bold;
     padding: 20px;
@@ -65,7 +66,7 @@ const Wrapper = styled.div`
   ol {
     color: #274c5b;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 18px;
     font-family: 'Roboto';
     font-weight: bold;
     padding: 40px 20px;
@@ -75,13 +76,13 @@ const Wrapper = styled.div`
 const Cart = styled.button`
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  
+
   padding-right: 25px;
   border-radius: 33px;
   border: 1px solid #e0e0e0;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   color: #274c5b;
 

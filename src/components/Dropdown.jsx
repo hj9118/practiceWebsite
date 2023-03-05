@@ -26,7 +26,8 @@ export const Dropdown = () => {
 
 const Wrapper = styled.div`
   position: absolute;
-  top: 75px;
+  top: 105px;
+  left: 960px;
   background-color: #eff6f1;
   width: 185px;
   padding: 20px 20px 20px 5px;
