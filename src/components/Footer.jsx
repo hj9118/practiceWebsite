@@ -121,6 +121,7 @@ const Main = styled(FooterGrid)`
   text-align: center;
   width: 543px;
   p {
+    padding: 40px 0;
     margin-bottom: 49px;
   }
 `;
