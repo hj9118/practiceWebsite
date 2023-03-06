@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled,{keyframes } from 'styled-components';
 
 const Button = styled.button`
   font-size: 20px;
@@ -18,7 +18,7 @@ export const DefaultBtn = styled(Button)`
     .arrow {
       color: #fff;
       transform: translate(5px);
-      transition: all .2s ease 0s
+      transition: all 0.2s ease 0s;
     }
   }
   .arrow {
@@ -27,4 +27,15 @@ export const DefaultBtn = styled(Button)`
     margin-left: 10px;
     vertical-align: text-top;
   }
+`;
+
+export const fadeUp = keyframes`
+    0% {
+      opacity: 0;
+      transform: translate(0, 100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateZ(0);
+    }
 `;

@@ -1,5 +1,4 @@
 import React from 'react';
-import Subscribe from './Subscribe';
 import logo from '../images/Logo.png';
 import styled from 'styled-components';
 import {
@@ -8,6 +7,7 @@ import {
   IoLogoPinterest,
   IoLogoTwitter,
 } from 'react-icons/io';
+import { fadeUp } from './GlobalStyle';
 
 const Footer = () => {
   return (
@@ -72,6 +72,9 @@ const Wrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  position: relative;
+  animation-name: ${fadeUp};
+  animation-duration: 1s;
 `;
 const FooterGrid = styled.div`
   display: flex;
@@ -118,6 +121,9 @@ const Main = styled(FooterGrid)`
 const Pages = styled(FooterGrid)`
   a {
     line-height: 273%;
+    :hover {
+      color: #7eb693;
+    }
   }
 `;
 const Icon = styled.div`
@@ -132,6 +138,10 @@ const Icon = styled.div`
   color: #274c5b;
   & + & {
     margin-left: 15px;
+  }
+  :hover {
+    background-color: #7eb693;
+    transition: all 0.2s ease 0s;
   }
 `;
 const Copyright = styled.div`
