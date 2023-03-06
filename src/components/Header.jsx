@@ -4,25 +4,38 @@ import { Dropdown } from './Dropdown';
 import Logo from '../images/Logo.png';
 import { IoIosArrowDown } from 'react-icons/io';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
   return (
     <Wrapper>
       <img src={Logo} alt='Logo' width={36} />
-      <a href='/' className='logo'>
+      <NavLink to='/' id='logo'>
         Organick
-      </a>
-      <a href='/'>Home</a>
-      <a href='/about-us'>About Us</a>
-      <a href='/shop'>Shop</a>
+      </NavLink>
+      <NavLink to='/' activeclassname='active'>
+        Home
+      </NavLink>
+      <NavLink to='/about-us' activeclassname='active'>
+        About Us
+      </NavLink>
+      <NavLink to='/shop' activeclassname='active'>
+        Shop
+      </NavLink>
       <ol onMouseOver={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
         Pages
         <IoIosArrowDown />
         {open && <Dropdown />}
       </ol>
-      <a href='/contact-us'>Contact Us</a>
-      <div className='blank' style={{ width: '120px' }}></div>
+      <NavLink to='/contact-us' activeclassname='active'>
+        Contact Us
+      </NavLink>
+      <div
+        className='blank'
+        activeclassname='active'
+        style={{ width: '120px' }}
+      ></div>
       <Cart>
         <AiOutlineShoppingCart className='cart-icon' />
         Cart 0
@@ -39,11 +52,12 @@ const Wrapper = styled.div`
   background-color: #fff;
   padding: 30px 0;
 
-  .logo {
+  #logo {
+    color: #274c5b;
     font-size: 32px;
     font-weight: bold;
-    &:hover {
-      color: #274c5b;
+    :hover {
+      
     }
   }
 
@@ -59,7 +73,7 @@ const Wrapper = styled.div`
       transition: color 0.2s ease 0s;
     }
     &.active {
-      background-color: black;
+      color: #7eb693;
     }
   }
 

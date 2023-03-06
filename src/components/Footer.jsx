@@ -8,6 +8,7 @@ import {
   IoLogoTwitter,
 } from 'react-icons/io';
 import { fadeUp } from './GlobalStyle';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -16,10 +17,10 @@ const Footer = () => {
         <Contact className='contact'>
           <h3>Contact Us</h3>
           <b>Email</b>
-          <a href='mailto:needhelp@organick.com'>needhelp@organick.com</a>
+          <Link to='mailto:needhelp@organick.com' className='link'>needhelp@organick.com</Link>
           <br />
           <b>Phone</b>
-          <a href='tel:12312541452'>123 (1254) 1252</a>
+          <Link to='tel:12312541452' className='link'>123 (1254) 1252</Link>
           <br />
           <b>Address</b>
           <p>88 Road, Brooklyn Street, USA</p>
@@ -50,11 +51,11 @@ const Footer = () => {
         </Main>
         <Pages>
           <h3> Utility Pages</h3>
-          <a href='/style-guide'>Style Guide</a>
-          <a href='/401'>Protected</a>
-          <a href='/*'>Page Not Found</a>
-          <a href='/changelog'>Changelog</a>
-          <a href='/licenses'>Licenses</a>
+          <Link to='/style-guide' className='link'>Style Guide</Link>
+          <Link to='/401' className='link'>Protected</Link>
+          <Link to='/*' className='link'>Page Not Found</Link>
+          <Link to='/changelog' className='link'>Changelog</Link>
+          <Link to='/licenses' className='link'>Licenses</Link>
         </Pages>
       </Wrapper>
       <Copyright>
@@ -93,6 +94,11 @@ const FooterGrid = styled.div`
     line-height: 165%;
     color: #525c60;
   }
+  .link {
+    :hover{
+      color: #7eb693;
+    }
+  }
   a,
   p {
     font-size: 18px;
@@ -119,11 +125,8 @@ const Main = styled(FooterGrid)`
   }
 `;
 const Pages = styled(FooterGrid)`
-  a {
+  .link {
     line-height: 273%;
-    :hover {
-      color: #7eb693;
-    }
   }
 `;
 const Icon = styled.div`
